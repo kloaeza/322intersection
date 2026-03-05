@@ -22,6 +22,18 @@ def on_segment(p, q, r):
 def do_intersect(seg1, seg2):
     p1, q1 = seg1
     p2, q2 = seg2
+
+    orientation1 = get_orientation(p1, q1, p2)
+    orientation2 = get_orientation(p1, q1, q2)
+    orientation3 = get_orientation(p2, q2, p1)
+    orientation4 = get_orientation(p2, q2, q1)
+
+    # General case
+    if orientation1 != orientation2 and orientation3 != orientation4:
+        return True
+
+    # Special case
+    
     
 
 if __name__ == "__main__":
