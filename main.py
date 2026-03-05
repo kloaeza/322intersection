@@ -33,7 +33,26 @@ def do_intersect(seg1, seg2):
         return True
 
     # Special case
+    #p1, q1, p2 collinear and p2 lies on p1*q1
+    if orientation1 == 0 and on_segment(p1, p2, q1):
+        return True
     
+    # p1, q1, q2 collinear and q2 lies on p1*q1
+    if orientation2 == 0 and on_segment(p1, q2, q1):
+        return True
+
+    # p2, q2, p1 collinear and p1 lies on p2*q2
+    if orientation3 == 0 and on_segment(p2, p1, q2):
+        return True
+    
+    # p2, q2, q1 collinear and q1 lies on p2*q2
+    if orientation4 == 0 and on_segment(p2, q1, q2):
+        return True
+    
+    # If none, no intersection, false
+    return False
+
+
     
 
 if __name__ == "__main__":
