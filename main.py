@@ -51,16 +51,34 @@ def do_intersect(seg1, seg2):
     
     # If none, no intersection, false
     return False
-
-
     
 
 if __name__ == "__main__":
-
+    # Add positive integers test
     _int_one = 5
     _int_two = 10
-
     math_result = add_positive_integers(_int_one, _int_two)
     print("Math Result:", math_result)
+
+    # Line segments intersect
+    segment_a = ((1, 1), (10, 1))
+    segment_b = ((1, 2), (10, 0))
+    print("\nLine Segment a: (1, 1), (10, 1)")
+    print("Line Segment b: (1, 2), (10, 0)")
+    print("Intersect:", do_intersect(segment_a, segment_b))
+
+    # Line segments dont intersect
+    segment_a = ((0, 5), (10, 5))
+    segment_b = ((0, 0), (10, 0))
+    print("\nLine Segment a: (0, 5), (10, 5)")
+    print("Line Segment b: (0, 0), (10, 0)")
+    print("Intersect:", do_intersect(segment_a, segment_b))
+
+    # Line segments collinear and overlapping
+    segment_a = ((0, 0), (5, 5))
+    segment_b = ((2, 2), (6, 6))
+    print("\nLine Segment a: (0, 0), (5, 5)")
+    print("Line Segment b: (2, 2), (6, 6)")
+    print("Intersect:", do_intersect(segment_a, segment_b))
 
 
