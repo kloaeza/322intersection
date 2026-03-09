@@ -16,6 +16,15 @@ def get_orientation(p, q, r):
     else:
         return 1 
     
+# Check if q lies on pr segment
+def on_segment(p, q, r):
+
+    return (min(p[0], r[0]) <= q[0] <= max(p[0], r[0]) and min(p[1], r[1]) <= q[1] <= max(p[1], r[1]))
+
+# Intersection logic
+def do_intersect(seg1, seg2):
+    return
+    
 
 if __name__ == "__main__":
 
@@ -24,5 +33,6 @@ if __name__ == "__main__":
 
     math_result = add_positive_integers(_int_one, _int_two)
     print("Math Result:", math_result)
+
 
 
