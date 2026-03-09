@@ -109,7 +109,7 @@ if __name__ == "__main__":
     segment_b = ((2, 2), (6, 6))
     print("\nLine Segment a: (0, 0), (5, 5)")
     print("Line Segment b: (2, 2), (6, 6)")
-    print("Intersect:", do_intersect(segment_a, segment_b))
+    print("Intersect:   ", do_intersect(segment_a, segment_b))
 
 
 
